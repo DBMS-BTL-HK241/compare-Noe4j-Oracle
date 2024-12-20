@@ -5,7 +5,7 @@ import psutil
 
 # Cấu hình kết nối đến Oracle
 dsn = cx_Oracle.makedsn("localhost", 1521, "XE")  # Dùng thông tin kết nối của bạn
-connection = cx_Oracle.connect("username", "password", dsn)
+connection = cx_Oracle.connect("oracle", "root25122003", dsn)
 
 SUCCESS_COUNT = 0
 FAILURE_COUNT = 0
@@ -49,9 +49,9 @@ if __name__ == "__main__":
         """)
         connection.commit()
 
-    NUM_TRANSACTIONS = 1000000
-    NUM_WORKERS = 100
-
+    NUM_TRANSACTIONS = 10
+    NUM_WORKERS = 2
+    
     cpu_before = psutil.cpu_percent(interval=1)
     memory_before = psutil.virtual_memory().used / (1024 ** 2)  # MB
 
