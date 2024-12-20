@@ -1,0 +1,16 @@
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE settings
+.vscode/
+.idea/
+
+# Thư mục ảo (virtualenv)
+venv/
+env/
+
+# Log files
+*.log
